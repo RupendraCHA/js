@@ -39,13 +39,29 @@
 // console.log(a)
 // a()
 
-function outer(b){
+// function outer(b){
+//     let a = 10
+//     function inner(){
+//         console.log(a, b)
+//     }
+//     return inner
+// }
+
+// let close = outer("Welcome Rupendra")
+// close()
+
+function outest(){
+    function outer(b){
     let a = 10
     function inner(){
         console.log(a, b)
     }
     return inner
 }
+return outer
 
-let close = outer("Welcome Rupendra")
-close()
+}
+outest()
+let close = outest()
+let inner = close("Welcome Rupendra Chandaluri")
+inner()
