@@ -24,17 +24,28 @@
 
 // greetMsg()
 
-function z(){
-    var b = 80;
-    function x(){
-        var a = 88
-        function y(){
-            console.log(a,b)
-        }
-        y()
+// function z(){
+//     var b = 80;
+//     function x(){
+//         var a = 88
+//         function y(){
+//             console.log(a,b)
+//         }
+//         y()
+//     }
+//     return x
+// }
+// const a = z()
+// console.log(a)
+// a()
+
+function outer(b){
+    let a = 10
+    function inner(){
+        console.log(a, b)
     }
-    return x
+    return inner
 }
-const a = z()
-console.log(a)
-a()
+
+let close = outer("Welcome Rupendra")
+close()
