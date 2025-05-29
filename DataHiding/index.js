@@ -17,21 +17,21 @@
 // console.log(count)
 
 // Data Hiding with Closure
-function outest(){
-    var b = 20
-    function outer() {
-    var a = 20
+// function outest(){
+//     var b = 20
+//     function outer() {
+//     var a = 20
 
-    function increment() {
-        a++
-        console.log(a)
-    }
-    increment()
-}
-outer()
+//     function increment() {
+//         a++
+//         console.log(a)
+//     }
+//     increment()
+// }
+// outer()
 
-}
-outest()
+// }
+// outest()
 
 // function outer() {
 //     var a = 20
@@ -45,3 +45,17 @@ outest()
 
 // outer()
 // console.log(a)
+
+// Garbage Collection 
+
+function a(){
+    var x = 0, z = 10
+
+    return function b(){
+        console.log(x)
+    }
+}
+
+var closure = a()
+
+closure()
