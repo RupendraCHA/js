@@ -25,6 +25,11 @@ b()
 console.log("-----------")
 console.log("Function Expression")
 
+
+// Anonymous Function
+// function (){
+
+// }
 let x = function (){
     console.log("This is the Function Expression with Anonymous Function as a Value.")
 }
