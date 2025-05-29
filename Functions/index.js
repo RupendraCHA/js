@@ -26,10 +26,7 @@ console.log("-----------")
 console.log("Function Expression")
 
 
-// Anonymous Function
-// function (){
 
-// }
 let x = function (){
     console.log("This is the Function Expression with Anonymous Function as a Value.")
 }
@@ -43,3 +40,22 @@ let x1 = function abc(){
 
 console.log(x1)
 x1()
+
+console.log("-----------")
+console.log("Anonymous Function")
+// Anonymous Function
+// function (){
+
+// }
+
+console.log("-----------")
+console.log("Named Function Expression")
+
+let x2 = function abc(){
+    console.log("abc function is in its Local Scope, not in Global Scope.")
+    console.log(abc)
+    console.log("This x2 is the Function Expression with Named Function Expression as a Value.")
+}
+
+console.log(x2)
+x2()
