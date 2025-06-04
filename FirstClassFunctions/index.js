@@ -11,4 +11,4 @@ function b(){
     console.log(10)
 }
 
-a(b)
+a(b) 
