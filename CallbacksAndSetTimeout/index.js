@@ -12,6 +12,22 @@
 //     console.log("y")
 // })
 
-document.getElementById("clickMe").addEventListener("click", function xyz(){
-    console.log("Button Clicked.")
-})
+
+
+// function attachEventListener(){
+//     let count = 0
+// document.getElementById("clickMe").addEventListener("click", function xyz(){
+//     console.log("Button Clicked.", ++count)
+// })
+// }
+
+// attachEventListener()
+
+// Call Stack
+
+function a(){
+    console.log("a")
+}
+
+a()
+console.log("End")
