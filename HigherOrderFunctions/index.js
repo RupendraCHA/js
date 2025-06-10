@@ -44,3 +44,32 @@ const calculateDiameter = function(radius) {
 }
 
 console.log(calculateDiameter(radius))
+
+
+// Using Higher Order Functions or taking Functional Approach
+
+// Calculating Circle Area, Circumference and Diameter
+
+const area = function (radius) {
+    return Math.PI * radius * radius
+}
+
+const circumference = function (radius){
+    return 2 * Math.PI * radius
+}
+
+const diameter = function (radius){
+    return 2 * radius
+}
+
+const calculate = function (radius, logic){
+    let output = []
+    for (let i = 0; i < radius.length; i++){
+        output.push(logic(radius[i]))
+    }
+    return output
+}
+
+console.log("Circle Area", calculate(radius, area))
+console.log("Circle Circumference", calculate(radius, circumference))
+console.log("Circle Diameter", calculate(radius, diameter))
