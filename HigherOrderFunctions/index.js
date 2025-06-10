@@ -1,6 +1,8 @@
 
 
-// Calculate are for given radiuses
+// Calculate area for circle with given radiuses
+
+// Area of a Circle - π * r2
 
 let radius = [3,1,2,4]
 
@@ -14,3 +16,17 @@ const calculateRadiuses = function(radius){
 }
 
 console.log(calculateRadiuses(radius))
+
+// Calculating circumference of a circle with give radiuses
+
+// Circumference of a circle - 2 * π * r
+
+const calculateCircumference = function(radius) {
+    const output = []
+    for (let i = 0; i < radius.length ; i++){
+        output.push(2 * Math.PI * radius[i])
+    }
+    return output
+}
+
+console.log(calculateCircumference(radius))
