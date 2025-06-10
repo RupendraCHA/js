@@ -62,17 +62,27 @@ const diameter = function (radius){
     return 2 * radius
 }
 
-const calculate = function (radius, logic){
+Array.prototype.calculate = function (logic){
     let output = []
-    for (let i = 0; i < radius.length; i++){
-        output.push(logic(radius[i]))
+    for (let i = 0; i < this.length; i++){
+        output.push(logic(this[i]))
+        console.log("THIS", this)
     }
     return output
 }
 
+const calculate = function (arr, logic){
+    let output = []
+    for (let i = 0; i < arr.length; i++){
+        output.push(logic(arr[i]))
+    }
+    return output
+}
 console.log("Map",radius.map(area))
 console.log("Map",radius.map(circumference))
 
-// console.log("Circle Area", calculate(radius, area))
-console.log("Circle Circumference", calculate(radius, circumference))
+console.log("Map Like",radius.calculate(area))
+
+console.log("Circle Area", calculate(radius, area))
+// console.log("Circle Circumference", calculate(radius, circumference))
 // console.log("Circle Diameter", calculate(radius, diameter))
