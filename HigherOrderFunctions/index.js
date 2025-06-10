@@ -30,3 +30,17 @@ const calculateCircumference = function(radius) {
 }
 
 console.log(calculateCircumference(radius))
+
+// Calculate Circle Diameter
+
+// Diameter of a circle - 2 * r
+
+const calculateDiameter = function(radius) {
+    const output = []
+    for (let i = 0; i < radius.length ; i++){
+        output.push(2 * radius[i])
+    }
+    return output
+}
+
+console.log(calculateDiameter(radius))
