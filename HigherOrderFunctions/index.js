@@ -70,6 +70,9 @@ const calculate = function (radius, logic){
     return output
 }
 
-console.log("Circle Area", calculate(radius, area))
+console.log("Map",radius.map(area))
+console.log("Map",radius.map(circumference))
+
+// console.log("Circle Area", calculate(radius, area))
 console.log("Circle Circumference", calculate(radius, circumference))
-console.log("Circle Diameter", calculate(radius, diameter))
+// console.log("Circle Diameter", calculate(radius, diameter))
