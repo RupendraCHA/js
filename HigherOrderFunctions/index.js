@@ -91,7 +91,7 @@ console.log("Circle Area", calculate(radius, area))
 
 // Map 
 
-const array = [5, 4, 1, 7, 9, 6,1000789,10]
+const array = [5, 4, 1, 7, 9, 6,10]
 
 const double = function(x){
     return x * 2
@@ -118,3 +118,23 @@ console.log("Triple", tripleResult)
 const binaryResult = array.map(binary)
 
 console.log(binaryResult)
+
+
+// Filter
+
+const oddNums = function(x){
+    console.log(x % 2)
+    return x%2
+}
+
+const evenNums = function (x){
+    return x % 2 === 0
+}
+
+const oddNumbersOutput = array.filter(oddNums)
+
+const evenNumbers = array.filter(evenNums)
+
+console.log("Odd Numbers ",oddNumbersOutput)
+
+console.log("Even Numbers", evenNumbers)
