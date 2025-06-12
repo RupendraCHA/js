@@ -86,3 +86,35 @@ console.log("Map Like",radius.calculate(area))
 console.log("Circle Area", calculate(radius, area))
 // console.log("Circle Circumference", calculate(radius, circumference))
 // console.log("Circle Diameter", calculate(radius, diameter))
+
+// Map , Reduce and Filter
+
+// Map 
+
+const array = [5, 4, 1, 7, 9, 6,1000789,10]
+
+const double = function(x){
+    return x * 2
+}
+
+const triple = function(x) {
+    return x * 3
+}
+
+const binary = function(x){
+    return x.toString(2)
+}
+
+console.log("Original Array", array)
+// console.log(array.__proto__.__proto__)
+const doubleResult = array.map(double)
+
+console.log("Double Result", doubleResult)
+
+const tripleResult = array.map(triple)
+
+console.log("Triple", tripleResult)
+
+const binaryResult = array.map(binary)
+
+console.log(binaryResult)
