@@ -138,3 +138,35 @@ const evenNumbers = array.filter(evenNums)
 console.log("Odd Numbers ",oddNumbersOutput)
 
 console.log("Even Numbers", evenNumbers)
+
+
+// reducer
+
+// Finding Sum of all elements
+
+function findSum(array){
+    let sum = 0
+    for (let i = 0; i < array.length; i++){
+        sum = sum + array[i]
+    }
+    return sum
+}
+
+const sumOfElements = findSum(array)
+
+console.log(sumOfElements)
+
+// Find Max
+
+function findMax(array){
+    let max = 0
+    for (let i = 0; i< array.length; i++){
+        if (array[i] > max){
+            max = array[i]
+        }
+    }
+    return max
+}
+
+const maxValue = findMax(array)
+console.log(maxValue)
