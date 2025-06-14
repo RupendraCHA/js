@@ -200,7 +200,8 @@ console.log("FULL NAMES LIST", fullnamesList)
 const ageCount = users.reduce((acc, curr) =>  {
     
     if (acc[curr.age]){
-        acc[curr.age] = ++acc[curr.age]
+        // acc[curr.age] = ++acc[curr.age]
+        acc[curr.age] += 1
     }else{
         acc[curr.age] = 1
     }
