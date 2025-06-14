@@ -170,3 +170,12 @@ function findMax(array){
 
 const maxValue = findMax(array)
 console.log(maxValue)
+
+const output = array.reduce((max, curr) => {
+    if (curr > max){
+        acc = curr
+    }
+    return acc
+},0)
+
+console.log(output)
