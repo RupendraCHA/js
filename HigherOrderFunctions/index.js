@@ -179,3 +179,34 @@ const output = array.reduce((max, curr) => {
 },0)
 
 console.log(output)
+
+// Map
+
+const users = [
+    {firstname: "Rupendra", lastname: "Chandaluri", age: 25},
+    {firstname: "Gopi", lastname: "Chandaluri", age: 29},
+    {firstname: "Vasundhara", lastname: "Chandaluri", age: 46},
+    {firstname: "Chiranjeevi", lastname: "Chandaluri", age: 52},
+    {firstname: "Eleesha", lastname: 'Gurrapsala', age: 25}
+]
+
+//  Print full names
+
+const fullnamesList = users.map((person) => person.firstname + " " + person.lastname)
+console.log("FULL NAMES LIST", fullnamesList)
+
+// Count no of people at certain age
+
+const ageCount = users.reduce((acc, curr) =>  {
+    
+    if (acc[curr.age]){
+        acc[curr.age] = ++acc[curr.age]
+    }else{
+        acc[curr.age] = 1
+    }
+
+    return acc
+}, {})
+
+console.log("AGE COUNT",ageCount)
+
