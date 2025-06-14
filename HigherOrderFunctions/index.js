@@ -224,3 +224,12 @@ console.log(firsNamesArray);
 const firstname = users.filter((user) => user.age < 30).map((user) => user.firstname)
 
 console.log("FIRST NAMES",firstname)
+
+const peopleFirstnames = users.reduce((acc, curr) => {
+    if (curr.age < 30){
+        acc.push(curr.firstname)
+    }
+    return acc
+}, [])
+
+console.log("PEOPLE FIRSTNAMES",peopleFirstnames)
