@@ -38,14 +38,14 @@ try {
     return orderSummary(paymentInfo);
   })
   .then(function (orderSummaryData) {
-    console.log(orderSummaryData);
+    console.log("Order Summary",orderSummaryData);
     return orderSummaryData
   })
   .then(function(orderSummaryData){
     return updateWallet(orderSummaryData)
   })
   .then(function(walletData){
-    console.log(walletData)
+    console.log("Your Wallet Balance",walletData)
   })
   .catch(function (err) {
     console.log(err.message);
