@@ -20,27 +20,6 @@ createOrder(cart, function () {
 // Async handling using callbacks causes Callback Hell & inversion of control
 // to avoid this problem we use promises to handle async tasks
 
-// const promise = createOrder(cart);
-
-// console.log(promise)
-
-// // console.log(promise);
-// function placeOrder(){
-//     try {
-//         promise
-//   .then(function (orderId) {
-//     console.log(orderId);
-//   })
-//   .catch(function (err) {
-//     // alert(err.message)
-//     console.log(err.message);
-//   });
-//     } catch (error) {
-//         console.log(error.message)
-//     }
-// }
-
-// placeOrder()
 
 try {
     createOrder(cart)
@@ -60,6 +39,13 @@ try {
   })
   .then(function (orderSummaryData) {
     console.log(orderSummaryData);
+    return orderSummaryData
+  })
+  .then(function(orderSummaryData){
+    return updateWallet(orderSummaryData)
+  })
+  .then(function(walletData){
+    console.log(walletData)
   })
   .catch(function (err) {
     console.log(err.message);
@@ -72,11 +58,15 @@ function validateCart(cart) {
   return true;
 }
 function validateOrderId(orderId) {
-  return false;
+  return true;
 }
 
 function validatePayment(paymentInfo){
-    return false
+    return true
+}
+
+function validateOrderSummaryData(orderSummaryData){
+    return true
 }
 
 function createOrder(cart) {
@@ -127,5 +117,24 @@ function orderSummary(paymentInfo){
             }, 3000)
         }
     
+    })
+}
+
+function updateWallet(orderSummaryData) {
+    return new Promise(function(resolve, reject){
+
+        if(!validateOrderSummaryData(orderSummaryData)){
+            const err = new Error("Your Wallet don't have balance.")
+            return reject(err)
+        }else{
+
+            const walletBalance = {
+                appName: "Paytm",
+                balance: "5,320"
+            }
+            setTimeout(function(){
+                resolve(walletBalance)
+            },3000)
+        }
     })
 }
