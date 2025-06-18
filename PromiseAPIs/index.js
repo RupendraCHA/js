@@ -85,25 +85,25 @@ async function runPromiseAll() {
 
 // Promises with rejections or failures
 
-const allP1 = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("P1 is resolved."), 3000)
-})
+// const allP1 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("P1 is resolved."), 3000)
+// })
 
-const allP2 = new Promise((resolve, reject) => {
-    setTimeout(() => reject("P2 is failed."), 4000)
-})
+// const allP2 = new Promise((resolve, reject) => {
+//     setTimeout(() => reject("P2 is failed."), 4000)
+// })
 
-const allP3 = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("P3 is resolved."), 1000)
-})
+// const allP3 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("P3 is resolved."), 1000)
+// })
 
-const allP4 = new Promise((resolve, reject) => {
-    setTimeout(() => reject("P4 is failed."), 2000)
-})
+// const allP4 = new Promise((resolve, reject) => {
+//     setTimeout(() => reject("P4 is failed."), 2000)
+// })
 
-const allP5 = new Promise((resolve, reject) => {
-    setTimeout(() => reject("P5 is resolved."), 5000)
-})
+// const allP5 = new Promise((resolve, reject) => {
+//     setTimeout(() => reject("P5 is resolved."), 5000)
+// })
 
 
 
@@ -116,4 +116,39 @@ async function runAllSettled() {
     }
 }
 
-runAllSettled()
+// runAllSettled()
+
+// Promise Race
+
+
+const allP1 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("P1 is resolved."), 3000)
+})
+
+const allP2 = new Promise((resolve, reject) => {
+    setTimeout(() => reject("P2 is rejected."), 1000)
+})
+
+const allP3 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("P3 is resolved."), 2000)
+})
+
+const allP4 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("P4 is resolved."), 4000)
+})
+
+const allP5 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("P5 is resolved."), 5000)
+})
+
+
+async function runPromiseRace() {
+    try {
+        const promiseRaceResult = await Promise.race([allP1, allP2, allP3, allP4, allP5])
+        console.log(promiseRaceResult)
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+runPromiseRace()
