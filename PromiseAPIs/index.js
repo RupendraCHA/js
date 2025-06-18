@@ -202,8 +202,8 @@ async function runPromiseAny() {
     try {
         const promiseAnyResult = await Promise.any([allP1, allP2, allP3, allP4, allP5])
     console.log(promiseAnyResult)
-    } catch (error) {
-        console.error(error)
+    } catch (err) {
+        console.error(err.errors)
     }
     
 }
