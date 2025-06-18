@@ -121,25 +121,25 @@ async function runAllSettled() {
 // Promise Race
 
 
-const allP1 = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("P1 is resolved."), 3000)
-})
+// const allP1 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("P1 is resolved."), 3000)
+// })
 
-const allP2 = new Promise((resolve, reject) => {
-    setTimeout(() => reject("P2 is rejected."), 1000)
-})
+// const allP2 = new Promise((resolve, reject) => {
+//     setTimeout(() => reject("P2 is rejected."), 1000)
+// })
 
-const allP3 = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("P3 is resolved."), 2000)
-})
+// const allP3 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("P3 is resolved."), 2000)
+// })
 
-const allP4 = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("P4 is resolved."), 4000)
-})
+// const allP4 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("P4 is resolved."), 4000)
+// })
 
-const allP5 = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("P5 is resolved."), 5000)
-})
+// const allP5 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("P5 is resolved."), 5000)
+// })
 
 
 async function runPromiseRace() {
@@ -151,4 +151,61 @@ async function runPromiseRace() {
     }
 }
 
-runPromiseRace()
+// runPromiseRace()
+
+// Promise Any
+
+// const allP1 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("P1 is resolved."), 30000)
+// })
+
+// const allP2 = new Promise((resolve, reject) => {
+//     setTimeout(() => reject("P2 is rejected."), 1000)
+// })
+
+// const allP3 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("P3 is resolved."), 8000)
+// })
+
+// const allP4 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("P4 is resolved."), 4000)
+// })
+
+// const allP5 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("P5 is resolved."), 5000)
+// })
+
+// All rejected
+
+const allP1 = new Promise((resolve, reject) => {
+    setTimeout(() => reject("P1 is rejected."), 3000)
+})
+
+const allP2 = new Promise((resolve, reject) => {
+    setTimeout(() => reject("P2 is rejected."), 1000)
+})
+
+const allP3 = new Promise((resolve, reject) => {
+    setTimeout(() => reject("P3 is rejected."), 2000)
+})
+
+const allP4 = new Promise((resolve, reject) => {
+    setTimeout(() => reject("P4 is rejected."), 4000)
+})
+
+const allP5 = new Promise((resolve, reject) => {
+    setTimeout(() => reject("P5 is rejected."), 5000)
+})
+
+async function runPromiseAny() {
+
+    try {
+        const promiseAnyResult = await Promise.any([allP1, allP2, allP3, allP4, allP5])
+    console.log(promiseAnyResult)
+    } catch (error) {
+        console.error(error)
+    }
+    
+}
+
+runPromiseAny()
