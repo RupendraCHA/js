@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dvxkeeeqs/image/upload/v1727239316/vs_syjood.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Email Template</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #a9edcd49;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .email-template-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+      .email-template-section {
+        margin: 30px;
+        width: 60%;
+        border-radius: 12px;
+        background-color: #fff;
+        border: 1px solid #000;
+      }
+      .event-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+      .email-template-sub-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #07e0a62f;
+        border-radius: 12px 12px 0px 0px;
+        height: 15%;
+      }
+      .email-template-header {
+        color: #000;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+      }
+      .email-template-details-section {
+        height: 60%;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .email-template-details-section-card {
+        color: #000;
+        width: 100%;
+      }
+      .email-template-subject {
+        background-color: #0707d9b8;
+        color: #fff;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .email-template-dates-section {
+        display: flex;
+        gap: 20%;
+        background-color: aliceblue;
+        margin: 0;
+        padding: 10px;
+      }
+      .assigned-to-person-info {
+        margin-top: 50px;
+      }
+      .assigned-person-heading {
+        background-color: #00800098;
+        color: #fff;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .start-time {
+        display: flex;
+        gap: 38px;
+        font-weight: 700;
+      }
+      .dates {
+        display: flex;
+        gap: 5px;
+        font-weight: 700;
+      }
+      .end-time {
+        display: flex;
+        gap: 33px;
+        font-weight: 700;
+      }
+      .event-info {
+        color: #0707d9;
+        font-size: 13px;
+      }
+      .event-text {
+        font-size: 13px;
+      }
+      .assigned-person-details{
+        padding-left: 10px;
+      }
+      .name-section {
+        display: flex;
+        font-size: 13px;
+        gap: 10px;
+        font-weight: 700;
+      }
+      .email-section {
+        display: flex;
+        font-size: 13px;
+        gap: 12px;
+        font-weight: 700;
+      }
+      .assigned-name {
+        color: #008000fc;
+      }
+      .email-template-footer-section {
+        background-color: #07e0a62f;
+        border-top: 1px solid #07e0a62f;
+        height: 20.5%;
+        border-radius: 0px 0px 12px 12px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .footer-section-three{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .link-tag{
+        text-decoration: none;
+      }
+      .footer-icon{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+      }
+      .social-icons{
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+      }
+      .footer-heading{
+        margin: 0;
+        font-size: 16px;
+        text-decoration: underline;
+      }
+      .visionsoft-icon{
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Namaste Javascript - Async Await</h1> -->
+    <!-- 45ab90a0 -->
+
+    <div class="email-template-container">
+      <div class="email-template-section">
+        <div class="email-template-sub-section">
+          <img
+            class="event-image"
+            src="https://res.cloudinary.com/dvxkeeeqs/image/upload/v1750139095/Event_Icon_gele7o.jpg"
+            alt="Event_Icon"
+          />
+          <h1 class="email-template-header">Event Invitation!</h1>
+        </div>
+        <div class="email-template-details-section">
+          <div class="email-template-details-section-card">
+            <h2 class="email-template-subject">
+              Subject: Technical Documentation & Follow up
+            </h2>
+            <div class="email-template-dates-section">
+              <div>
+                <p class="dates">
+                  <span class="event-text">Start Date</span>
+                  <span class="event-info"> : 17-06-2025</span>
+                </p>
+                <p class="start-time">
+                  <span class="event-text">Time</span>
+                  <span class="event-info">: 4:00 a.m</span>
+                </p>
+              </div>
+              <div>
+                <p class="dates">
+                  <span class="event-text">End Date</span>
+                  <span class="event-info"> : 17-06-2025</span>
+                </p>
+                <p class="end-time">
+                  <span class="event-text">Time</span>
+                  <span class="event-info">: 5:00 a.m</span>
+                </p>
+              </div>
+            </div>
+            <div class="assigned-to-person-info">
+              <h3 class="assigned-person-heading">
+                Assigned to:
+              </h3>
+              <div class="assigned-person-details">
+                <p class="name-section">
+                  <span>Name</span
+                  ><span class="assigned-name">: Rupendra Chandaluri</span>
+                </p>
+                <p class="email-section">
+                  <span>Email</span
+                  ><span class="assigned-name">: Chandaluri210@gmail.com</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="email-template-footer-section">
+            <img  class="visionsoft-icon" src="https://res.cloudinary.com/dvxkeeeqs/image/upload/v1727239316/vs_syjood.jpg" alt="visionsoft_logo"/>
+          <div class="footer-section-three">
+                <h2 class="footer-heading">Follow Us On</h2>
+                <div class="social-icons" >
+                  <a
+                  class="link-tag"
+                    href="https://www.facebook.com/visionsoftinfo/"
+                    target="_blank"
+                  >
+                    <img
+                        class="footer-icon"
+                      src="https://res.cloudinary.com/dvxkeeeqs/image/upload/v1750144074/Facebook_vksje3.jpg"
+                      alt="Facebook_Icon"
+                    />
+                  </a>
+                  <a
+                  class="link-tag"
+                    href="https://x.com/i/flow/login?redirect_after_login=%2Fvisionsoftinfo"
+                    target="_blank"
+                  >
+                    <img
+                        class="footer-icon"
+                      src="https://res.cloudinary.com/dvxkeeeqs/image/upload/v1750144140/X_zylln0.png"
+                      alt="X_Icon"
+                    />
+                  </a>
+                  <a
+                  class="link-tag"
+                    href="https://www.linkedin.com/company/vsoft-inc/posts/?feedView=all"
+                    target="_blank"
+                  >
+                    <img
+                        class="footer-icon"
+                      src="https://res.cloudinary.com/dvxkeeeqs/image/upload/v1750144104/Linkedin_rs3lma.png"
+                      alt="Linkedin_Icon"
+                    />
+                  </a>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

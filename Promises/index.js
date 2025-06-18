@@ -27,9 +27,11 @@ try {
     console.log(orderId);
     return orderId;
   })
+  
   .then(function (orderId) {
     return proceedToPayment(orderId);
   })
+  
   .then(function (paymentInfo) {
     console.log(paymentInfo);
     return paymentInfo;
